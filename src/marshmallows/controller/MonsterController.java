@@ -24,6 +24,12 @@ public class MonsterController
 	public void start()
 	{
 		myOutput.displayMonsterInfo(rinzlerMonster.toString());
+		askQuestions();
+		myOutput.displayMonsterInfo("New Monster Info" + rinzlerMonster)
 	}
 
+	private void askQuestions()
+	{
+		
+	}
 }
