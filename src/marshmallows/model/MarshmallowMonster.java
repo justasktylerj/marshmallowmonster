@@ -8,21 +8,21 @@ public class MarshmallowMonster
 	private int monsterNoses;
 	private double monsterHair;
 	private double monsterLegs;
-	private boolean monsterBellyButton;
+	private boolean monsterHasBellyButton;
 	
 	private MarshmallowMonster()
 	{
 		
 	}
 	
-	public MarshmallowMonster(String monsterName, int monsterEyes, int monsterNoses, double monsterHair, double monsterLegs, boolean monsterBellyButton)
+	public MarshmallowMonster(String monsterName, int monsterEyes, int monsterNoses, double monsterHair, double monsterLegs, boolean monsterHasBellyButton)
 	{
 		this.monsterName = monsterName;
 		this.monsterEyes = monsterEyes;
 		this.monsterNoses = monsterNoses;
 		this.monsterHair = monsterHair;
 		this.monsterLegs = monsterLegs;
-		this. monsterBellyButton = monsterBellyButton;
+		this. monsterHasBellyButton = monsterHasBellyButton;
 		
 	}
 
@@ -37,10 +37,6 @@ public class MarshmallowMonster
 		return monsterEyes;
 	}
 	
-	public void setMonsterName(String monsterName)
-	{
-		this.monsterName = monsterName;
-	}
 	public int getMonsterNoses()
 	{
 		return monsterNoses;
@@ -56,9 +52,14 @@ public class MarshmallowMonster
 		return monsterLegs;
 	}
 	
-	public boolean getMonsterBellyButton()
+	public boolean getMonsterHasBellyButton()
 	{
-		return monsterBellyButton;
+		return monsterHasBellyButton;
+	}
+	
+	public void setMonsterName(String monsterName)
+	{
+		this.monsterName = monsterName;
 	}
 	
 	public void setMonsterEyes(int monsterEyes)
@@ -81,13 +82,13 @@ public class MarshmallowMonster
 		this.monsterLegs = monsterLegs;
 	}
 	
-	public void setMonsterBellyButton(boolean monsterBellyButton)
+	public void setMonsterBellyButton(boolean monsterHasBellyButton)
 	{
-		this.monsterBellyButton = monsterBellyButton;
+		this.monsterHasBellyButton = monsterHasBellyButton;
 	}
 	public String toString()
 	{
-		String info = "my monster has " + monsterEyes + " Eyes, and its name is " + monsterName;
-		return info;
+		String monster = "my monster has " + monsterEyes + " Eyes, its name is " + monsterName + " and has " + monsterHair + " hairs, " + monsterLegs + " legs, and does it have a bellybutton? " + monsterHasBellyButton;
+		return monster;
 	}
 }
