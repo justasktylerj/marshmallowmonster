@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class MonsterController
 {
-	private MarshmallowMonster rinzlerMonster;
+	private MarshmallowMonster TylerMonster;
 	private MarshmallowMonster userMonster;
 	private MarshmallowOutput myOutput;
 	private Scanner monsterScanner;
@@ -22,42 +22,44 @@ public class MonsterController
 		
 		monsterScanner = new Scanner(System.in);
 		myOutput = new MarshmallowOutput();
-		rinzlerMonster = new MarshmallowMonster(name, eyes, noses, hair, legs, hasBellyButton);
+		TylerMonster = new MarshmallowMonster(name, eyes, noses, hair, legs, hasBellyButton);
 	}
 	
 	public void start()
 	{
-		rinzlerMonster.toString();
-		myOutput.displayMonsterInfo(rinzlerMonster.toString());
-		askQuestions();
-		myOutput.displayMonsterInfo("New Monster info: " + rinzlerMonster.toString());
+		myOutput.displayMonsterConsole(TylerMonster.toString());
+		myOutput.displayMonsterGUI(TylerMonster.toString());
+		myOutput.displayMonsterBeg(TylerMonster.toString());
+		myOutput.displayMonsterHelp(TylerMonster.toString());
+		//this.makeUserMonster();
+		//myOutput.displayMonsterGUI("New Monster Info" + userMonster.toString());
 	}
 
 	private void askQuestions()
 	{
-		System.out.println("Type in a better name or the monster");
+		System.out.println("master, give me a name");
 		String betterMonsterName = monsterScanner.next();
 		
-		System.out.println("Type in a different number of eyes for the monster");
+		System.out.println("GIVE ME A NUMBER OF EYES");
 		int betterMonsterEyes = monsterScanner.nextInt();
 		
-		System.out.println("Type in a different number of noses for the monster");
+		System.out.println("TIME FOR NOSES");
 		int betterMonsterNoses = monsterScanner.nextInt();
 		
-		System.out.println("Type in a different number of hair for the monster");
+		System.out.println("HOW BOUT HAIR");
 		double betterMonsterHair = monsterScanner.nextDouble();
 		
-		System.out.println("Type in a different number of legs for the monster");
+		System.out.println("GIVE ME SOME LEGS!");
 		double betterMonsterLegs = monsterScanner.nextDouble();
 		
-		System.out.println("Type in a wheather or not it has a belly button for the monster");
+		System.out.println("Do I have a belly button?");
 		boolean betterMonsterHasBellyButton = monsterScanner.nextBoolean();
-		rinzlerMonster.setMonsterName(betterMonsterName);
-		rinzlerMonster.setMonsterEyes(betterMonsterEyes);
-		rinzlerMonster.setMonsterNoses(betterMonsterNoses);
-		rinzlerMonster.setMonsterHair(betterMonsterHair);
-		rinzlerMonster.setMonsterLegs(betterMonsterLegs);
-		rinzlerMonster.setMonsterBellyButton(betterMonsterHasBellyButton);
+		TylerMonster.setMonsterName(betterMonsterName);
+		TylerMonster.setMonsterEyes(betterMonsterEyes);
+		TylerMonster.setMonsterNoses(betterMonsterNoses);
+		TylerMonster.setMonsterHair(betterMonsterHair);
+		TylerMonster.setMonsterLegs(betterMonsterLegs);
+		TylerMonster.setMonsterBellyButton(betterMonsterHasBellyButton);
 		
 	}
 
