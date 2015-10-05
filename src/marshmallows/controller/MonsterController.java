@@ -29,10 +29,8 @@ public class MonsterController
 	{
 		myOutput.displayMonsterConsole(TylerMonster.toString());
 		myOutput.displayMonsterGUI(TylerMonster.toString());
-		myOutput.displayMonsterBeg(TylerMonster.toString());
-		myOutput.displayMonsterHelp(TylerMonster.toString());
-		//this.makeUserMonster();
-		//myOutput.displayMonsterGUI("New Monster Info" + userMonster.toString());
+		this.makeUserMonster();
+		myOutput.displayMonsterGUI(userMonster.toString());
 	}
 
 	private void askQuestions()
@@ -89,6 +87,7 @@ public class MonsterController
 		userLegs = monsterScanner.nextDouble();
 		System.out.println("does your monster have a belly button?");
 		userHasBellyButton = monsterScanner.nextBoolean();
+		monsterScanner.nextLine();
 		
 		//step three: make a monster - use constructor!! remember that order of parameters matters!
 		userMonster = new MarshmallowMonster(userName, userEyes, userNoseCount, userHair, userLegs, userHasBellyButton);

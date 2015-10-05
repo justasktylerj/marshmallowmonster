@@ -14,13 +14,9 @@ public class MarshmallowOutput
     	JOptionPane.showMessageDialog(null, "My Monster information is: " + info);
     }
     
-    public void displayMonsterBeg(String info)
+    public void displayMonsterBeg(String userMonster)
     {
-    	JOptionPane.showMessageDialog(null, "Master, I have: ");
+    	JOptionPane.showMessageDialog(null, "Master, I have: " + userMonster);
     }
     
-    public void displayMonsterHelp(String info)
-    {
-    	JOptionPane.showMessageDialog(null, "Master, my info is: " );
-    }
-}
+}  
